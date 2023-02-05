@@ -1,0 +1,8 @@
+version: '4'
+
+services:
+  redis-cache:
+    image: redis:alpine
+    restart: always
+    ports:
+      - 6379:6379
