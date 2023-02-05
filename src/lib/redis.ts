@@ -12,6 +12,8 @@ export default new class CacheService {
   }
 
   public async set(key: string, value: string): Promise<void> {
-    await this.redis.set(key, value);
+    const parsingValue = JSON.stringify(value);
+
+    await this.redis.set(key, parsingValue);
   }
 }
